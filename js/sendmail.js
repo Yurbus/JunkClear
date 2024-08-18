@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Получаем все формы на странице
-    const forms = document.querySelectorAll('form');
+    const forms = document.querySelectorAll('form__contact');
     
     // Проходимся по каждой форме и добавляем обработчик события отправки
     forms.forEach(function(form) {

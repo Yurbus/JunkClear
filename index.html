@@ -282,7 +282,7 @@
 								<span>Leave your contact information, and our manager will get in touch with you.</span>
 								
 								<input type="text" class="input_date _req" name="name" placeholder="Name">
-								<input type="text" class="input_date _req" name="name" placeholder="Second Name">
+								<input type="text" class="input_date _req" name="name2" placeholder="Second Name">
 								<input type="email" class="input_date _req" name="email" placeholder="Email">
 								<input type="tel" id="phone_mask" class="input_date _req" name="phone" placeholder="Phone">
 								<textarea class="input_date" name="message" cols="30" rows="5" placeholder="Message"></textarea>
@@ -318,73 +318,13 @@
 			</div>
 		</div>
 	</footer>
-	
-	<!-- <div class="koocies_container">
-		<div class="koocies">
-			<div class="koocies__wrapp">
-				<div class="koocies__left">
-					<img src="img/koocies.svg" alt="kookies">
-					<div class="koocies__text">
-						<span class="text__koocie">We use cookies to analyze our traffic.</span>
-						<a href="" class="link__koocie">Read cookies polices</a>	
-					</div>
-				</div>
-				<div class="koocies__right">
-					<div class="koocies__buttons">
-						<button class="koocie__btn btn__reject">Reject</button>
-						<button class="koocie__btn btn__accept">Ok</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
-
-	<!-- <div class="toUp">
-		<a href="" class="up_btn"><img src="img/up.svg" alt="icon"></a>
-		<style>
-			.toUp {
-				position: fixed;
-				bottom: 20px;
-				right: 20px;
-				z-index: 20;
-			}
-		</style>
-	</div> -->
-	<!-------------------------- Popup ------------------------------>
-	<!-- <div id="popup" class="popup">
-		<div class="popup__body">
-			<div class="popup__content">
-				<a href="#" class="popup__close close-popup"><img src="img/close.svg" alt="close"></a>
-				<form action="#" id="form" class="form__contact">
-					<h4>Contact us</h4>
-					<span>Get in Touch with PTG SA/ELGRAF</span>
-					<div class="input__croup">
-						<input type="text" class="input_date _req" name="name" placeholder="Name">
-						<input type="text" class="input_date" name="lastName" placeholder="Second Name">
-					</div>
-					<input type="tel" id="phone_mask" class="input_date _req" name="phone" placeholder="Phone">
-					<input type="email" class="input_date _email _req" name="email" placeholder="Email">
-					<textarea class="input_date" name="message" cols="30" rows="7" placeholder="Type something"></textarea>
-					
-					<div class="bottom__action">
-						<div class="policy__check">
-							<input type="checkbox" id="policy" class="policy" name="interest" value="I confirm the processing of my personal data">
-							<label for="policy" class="policy__label">I confirm the processing of my <a href="#" target="_blank">personal data</a></label>
-						</div>
-						<button type="submit" class="contact__btn">Send</button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div> -->
-	<!-- End popup -->
 
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/maskeinput.js"></script>
-	<!-- <script src="js/sendmail.js"></script> -->
+	<script src="js/sendmail.js"></script>
 
 	<script>
 		var swiper = new Swiper(".mySwiper", {
@@ -395,36 +335,6 @@
 		  },
 		});
 	  </script>
-
-	<script>
-		document.querySelectorAll('form.form__contact').forEach(function(form) {
-		form.addEventListener('submit', function(event) {
-			event.preventDefault(); // предотвращаем стандартное поведение формы
-
-			var formData = new FormData(this);
-
-			fetch('send.php', { // замените на путь к вашему PHP-скрипту
-				method: 'POST',
-				body: formData
-			})
-			.then(function(response) {
-				if (response.ok) {
-					return response.text();
-				} else {
-					throw new Error('Network response was not ok.');
-				}
-			})
-			.then(function(responseText) {
-				alert(responseText);
-				// Здесь можно добавить логику после успешной отправки формы
-			})
-			.catch(function(error) {
-				alert('An error occurred. Please try again.');
-				// Логика обработки ошибок
-			});
-		});
-	});
-	</script>
 	
 </body>
 </html>
