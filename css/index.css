@@ -59,6 +59,7 @@ body.lock {
   margin: 0 auto;
   padding: 0 10px;
   position: relative;
+  overflow: hidden;
 }
 
 html, body {
@@ -114,7 +115,7 @@ html, body {
 .hero__body {
   padding-top: 200px;
   display: grid;
-  grid-template-columns: 1fr 40%;
+  grid-template-columns: 1fr 38%;
   position: relative;
   overflow: hidden;
 }
@@ -232,6 +233,371 @@ html, body {
   background: #f5c106;
 }
 
+/*----------------- benefits ------------------------------*/
+.benefits {
+  padding: 100px 0;
+}
+
+.title__h2 {
+  font-weight: 600;
+  font-size: clamp(32px, 4vw, 44px);
+  text-align: center;
+  font-family: "conthrax-sb";
+  margin-bottom: 44px;
+}
+
+.benefits__items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.benefits__items .item__benefit {
+  display: flex;
+  align-items: center;
+  background: #1e1e1e;
+  padding: 24px;
+}
+.benefits__items .item__benefit img {
+  width: 68px;
+  margin-right: 24px;
+}
+.benefits__items .item__text h3 {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.benefits__items .item__text p {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/*----------------- about ------------------------------*/
+.about {
+  padding: 100px 0;
+}
+
+.title__block {
+  margin-bottom: 44px;
+}
+.title__block .about__title {
+  margin-bottom: 20px;
+}
+.title__block p {
+  text-align: center;
+}
+
+.about__servise {
+  display: grid;
+  grid-template-columns: 50% 1fr;
+  gap: clamp(20px, 6vw, 60px);
+  align-items: center;
+}
+
+.servise__content p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  margin-bottom: 30px;
+}
+.servise__content span {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 140%;
+  margin-bottom: 10px;
+}
+.servise__content h4 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  margin-bottom: 12px;
+}
+.servise__content .servise__btn {
+  margin-top: 32px;
+}
+.servise__content .servise__btn a {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 16px;
+  color: #000;
+  background: #ffc702;
+  padding: 22px 57px;
+}
+.servise__content .servise__btn a:hover {
+  background: #e8b400;
+}
+
+.about__servise-reverce {
+  margin-top: 150px;
+}
+.about__servise-reverce .servise__img {
+  order: 2;
+}
+.about__servise-reverce .servise__content {
+  order: 1;
+}
+
+/*----------------- yellow ------------------------------*/
+.yellow {
+  padding: 100px 0;
+}
+
+.yellow__body {
+  background: #ffc702;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 60px 15px;
+}
+
+.yellow__text {
+  display: flex;
+  align-items: center;
+}
+.yellow__text img {
+  width: 40px;
+  margin-right: 13px;
+}
+.yellow__text .descr p {
+  font-weight: 400;
+  font-size: 20px;
+}
+.yellow__text .descr span {
+  font-weight: 800;
+  font-size: 32px;
+}
+
+.yellow__btn {
+  width: 200px;
+}
+.yellow__btn a {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 22px 57px;
+  background: #000;
+  transition: all 0.3s ease 0s;
+}
+.yellow__btn a:hover {
+  background: #fff;
+  color: #000;
+}
+
+/*----------------- our services ------------------------------*/
+.ourservices {
+  padding: 100px 0;
+}
+
+.ourservices__title {
+  margin-bottom: 90px;
+}
+
+.ourservices__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.ourservices__body .ourservices__item {
+  position: relative;
+}
+.ourservices__body .sale {
+  position: absolute;
+  display: inline-block;
+  font-weight: 900;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 8px 24px;
+  background: #f00;
+  right: 0;
+  top: -50px;
+}
+.ourservices__body .title__h3 {
+  font-weight: 600;
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-family: "conthrax-sb";
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.ourservices__body .ourservices__btn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 19px;
+  text-align: center;
+  color: #000;
+  background: #ffc702;
+  padding: 26px;
+}
+.ourservices__body .ourservices__btn a img {
+  margin-left: 12px;
+  width: 18px;
+}
+.ourservices__body .ourservices__btn a:hover {
+  background: #ffcb11;
+}
+
+/*----------------- Reviews ------------------------------*/
+.reviews {
+  padding: 100px 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: #ffffff !important;
+}
+
+.review__wrapp {
+  text-align: center;
+  max-width: 630px;
+  margin: 20px auto 0;
+}
+.review__wrapp p {
+  font-weight: 500;
+  font-size: clamp(15px, 4vw, 18px);
+  line-height: 140%;
+}
+.review__wrapp .stars {
+  margin: 44px 0 12px;
+}
+.review__wrapp .stars img {
+  width: 24px;
+}
+.review__wrapp .review_name {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 140%;
+  color: #ffc702;
+}
+
+/*----------------- contact us ------------------------------*/
+.contact {
+  padding-top: 50px;
+}
+
+.contact__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.contact__body .contact__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+.contact__body .contact__form {
+  background: #ffc702;
+  padding: clamp(20px, 5vw, 44px);
+}
+.contact__body .form__contact {
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  padding-top: 20px;
+}
+.contact__body .form__contact h4 {
+  font-weight: 600;
+  font-size: 32px;
+  margin-bottom: 12px;
+  font-family: "conthrax-sb";
+}
+.contact__body .form__contact span {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+.contact__body .input_date {
+  border: none;
+  background: #1a1a1a;
+  padding: 24px;
+  margin-bottom: 24px;
+  font-weight: 500;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  font-family: "Montserrat", sans-serif;
+}
+.contact__body input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.contact__body input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.contact__body .contact__btn {
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  background: #fff;
+  padding: 22px 57px;
+  width: 200px;
+  margin: 0 auto;
+  transition: all 0.3s ease 0s;
+}
+.contact__body .contact__btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+/*----------------- privacy ------------------------------*/
+.privacy__title {
+  font-weight: 600;
+  font-size: clamp(24px, 4vw, 32px);
+  margin-bottom: 32px;
+  font-family: "conthrax-sb";
+}
+
+.pivacy__container {
+  max-width: 847px;
+  padding: 80px 0;
+}
+
+.privacy__content {
+  text-align: left;
+}
+.privacy__content h2 {
+  font-weight: 600;
+  font-size: clamp(18px, 4vw, 24px);
+  font-family: "conthrax-sb";
+  margin-bottom: 10px;
+}
+.privacy__content ul {
+  margin-top: -40px;
+}
+.privacy__content ul li {
+  list-style: inside;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160%;
+}
+.privacy__content p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160%;
+  margin-bottom: 42px;
+}
+
+.privacy__btn {
+  margin-top: 60px;
+}
+.privacy__btn a {
+  font-weight: 700;
+  font-size: 16px;
+  color: #000;
+  background: #ffc702;
+  padding: 22px 44px;
+}
+
 /*----------------- footer ------------------------------*/
 .footer {
   background: #212121;
@@ -249,10 +615,14 @@ html, body {
 
 .footer__phones {
   text-align: center;
+  font-weight: 500;
+  font-size: clamp(20px, 4vw, 32px);
 }
 
 .address_list {
   text-align: right;
+  font-weight: 500;
+  font-size: clamp(18px, 4vw, 24px);
 }
 
 .privacy {
@@ -260,6 +630,9 @@ html, body {
   padding: 20px;
 }
 
+/*===============================================================================*/
+/*===============================================================================*/
+/*===============================================================================*/
 @media (max-width: 1100px) {
   .hero {
     height: 100%;
@@ -270,6 +643,58 @@ html, body {
   }
   .hero .man {
     right: 0;
+  }
+}
+@media (max-width: 960.98px) {
+  .benefits__items {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .footer__body {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    justify-content: center;
+  }
+  .address_list {
+    text-align: center;
+  }
+  .footer__logo {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 768px) {
+  .about__servise {
+    grid-template-columns: 1fr;
+  }
+  .about__servise-reverce {
+    margin-top: 40px;
+  }
+  .about__servise-reverce .servise__img {
+    order: 1 !important;
+  }
+  .about__servise-reverce .servise__content {
+    order: 2;
+  }
+  .yellow__text {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .yellow__btn {
+    margin-top: 20px;
+  }
+  .yellow__text .descr p {
+    text-align: right;
+    margin-bottom: 15px;
+  }
+  .ourservices__body {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 90px;
+  }
+  .ourservices__body .title__h3 {
+    margin-bottom: 30px;
   }
 }
 @media (max-width: 640.98px) {
@@ -307,6 +732,44 @@ html, body {
   }
   .hero__body .form__block .form__contact {
     width: 100%;
+  }
+  .yellow {
+    padding: 10px 0;
+  }
+  .benefits {
+    margin-top: 650px;
+  }
+  .benefits__items .item__benefit {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .benefits__items .item__benefit img {
+    margin-bottom: 24px;
+  }
+  .about {
+    padding: 50px 0;
+  }
+  .reviews {
+    padding: 50px 0;
+  }
+  .review__wrapp {
+    margin: 20px 20px 0;
+  }
+  .swiper-button-next, .swiper-button-prev {
+    display: none;
+  }
+  .contact__body {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .contact__img {
+    display: none;
+  }
+  .contact__body .form__contact {
+    padding-top: 0;
+  }
+  .contact__body .contact__form {
+    padding: 44px 16px;
   }
 }
 /*# sourceMappingURL=index.css.map */
