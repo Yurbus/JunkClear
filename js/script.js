@@ -280,16 +280,16 @@ $('a[href*="#"]').on('click', function (e) {
 // }
 
 //-------------------------------------------------------------------------------------------------
-// $('#form').submit(function(){
-// 	$.ajax({
-// 		type:"POST",
-// 		url: "mail.php",
-// 		data: $(this).serialize()
-// 	}).done(function() {
-// 	alert("Thank you for contacting us!");
-// 	setTimeout(function() {
-// 		$.magnificPopup.close();
-// 	}, 1000);
-// 	});
-// 	return false;
-// });
+$('#form').submit(function(){
+	$.ajax({
+		type:"POST",
+		url: "send.php",
+		data: $(this).serialize()
+	}).done(function() {
+	alert("Thank you for contacting us!");
+	setTimeout(function() {
+		$.magnificPopup.close();
+	}, 1000);
+	});
+	return false;
+});

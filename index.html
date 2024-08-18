@@ -59,7 +59,12 @@
 
 						</div>
 						<div class="form__block">
-							<form action="#" id="form"method="POST" class="form__contact">
+							<form action="send.php" id="form" method="POST" class="form__contact">
+								<!-- Hidden Required Fields -->
+								<input type="hidden" name="project_name" value="Unirem">
+								<input type="hidden" name="admin_email" value="frankins636@gmail.com">
+								<input type="hidden" name="form_subject" value="Заявка с главной страницы">
+								<!-- END Hidden Required Fields -->
 								<h4>Need a free estimate?</h4>
 								<span>Just let us know what you need removed!</span>
 								
@@ -379,7 +384,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/maskeinput.js"></script>
-	<script src="js/sendmail.js"></script>
+	<!-- <script src="js/sendmail.js"></script> -->
 
 	<script>
 		var swiper = new Swiper(".mySwiper", {
@@ -390,6 +395,38 @@
 		  },
 		});
 	  </script>
+
+	<script>
+		document.querySelectorAll('form.form__contact').forEach(function(form) {
+		form.addEventListener('submit', function(event) {
+			event.preventDefault(); // предотвращаем стандартное поведение формы
+
+			var formData = new FormData(this);
+
+			fetch('send.php', { // замените на путь к вашему PHP-скрипту
+				method: 'POST',
+				body: formData
+			})
+			.then(function(response) {
+				if (response.ok) {
+					return response.text();
+				} else {
+					throw new Error('Network response was not ok.');
+				}
+			})
+			.then(function(responseText) {
+				alert(responseText);
+				// Здесь можно добавить логику после успешной отправки формы
+			})
+			.catch(function(error) {
+				alert('An error occurred. Please try again.');
+				// Логика обработки ошибок
+			});
+		});
+	});
+	</script>
 	
 </body>
 </html>
+
+
