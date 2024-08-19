@@ -20,16 +20,14 @@
     $mail->Subject = "Message from Junk Clear";
 
     // Body
-    $body = '<h1>Message from PTG website</h1>';
+    $body = '<h1>Message from Junk Clear website</h1>';
 
-    if (isset($_POST['productTitle']) && trim($_POST['productTitle']) !== '') {
-        $body .= '<p><strong>Title product:</strong> ' . $_POST['productTitle'] . '</p>';
-    }
+
     if (isset($_POST['name']) && trim($_POST['name']) !== '') {
         $body .= '<p><strong>Name:</strong> ' . $_POST['name'] . '</p>';
     }
     if (isset($_POST['name2']) && trim($_POST['name2']) !== '') {
-        $body .= '<p><strong>Last name:</strong> ' . $_POST['name2'] . '</p>';
+        $body .= '<p><strong>Second name:</strong> ' . $_POST['name2'] . '</p>';
     }
     if (isset($_POST['phone']) && trim($_POST['phone']) !== '') {
         $body .= '<p><strong>Phone:</strong> ' . $_POST['phone'] . '</p>';
